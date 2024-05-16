@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    --webkit-box-sizing: border-box;
+    --moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);   
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--White);
+    font-family: "League Spartan", sans-serif;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 1.5rem;
+    background-image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: right 67vw bottom 57vh, left 60vw top -21vh;
+}
+
+main{
+    width: 1020px;
+    margin-bottom: 3rem;
+}
+
+.container{
+    max-width: 100%;
+    padding: 30px;
+}
+
+.container .head-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.container .head-1 .title{
+    width: 300px;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+    margin-bottom: 2rem;
+    font-size: 35px;
+} 
+
+.container .head-1 .p-1{
+    color: var(--Dark-Grayish-Magenta);
+    width: 350px;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.container .rate{
+    width: 400px;
+    align-content: flex-end;
+    margin-top: 10px;
+}
+
+.container .rate-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--Light-Grayish-Magenta);
+    margin-bottom: 20px;
+    width: 400px;
+    padding: 20px;
+    border-radius: .5rem;
+}
+.container .rate-1 .p-2{
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+}
+
+#rate-1-1{
+    margin-left: -100px;
+}
+#rate-2-1{
+    margin-left: -45px;
+}
+
+.container .avatar{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.container .avatar .smith,
+.container .avatar .robert,
+.container .avatar .anne{
+    background-color: var(--Very-Dark-Magenta);
+    padding: 30px 20px;
+    border-radius: .5rem;
+    height: fit-content;
+}
+
+.container .avatar img{
+    border-radius: 50%;
+    width: 50px;
+    margin-left: -19px;
+}
+
+.container .avatar .smith .smith-1,
+.container .avatar .robert .robert-1,
+.container .avatar .anne .anne-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+}
+
+.container .avatar .name .title{
+    color: var(--White);
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.container .avatar .p-3{
+    color: var(--Soft-Pink);
+}
+
+.container .avatar .p-4{
+    color: var(--Light-Grayish-Magenta);
+    line-height: 1.5;
+    width: 260px;
+}
+
+.container .avatar .robert{
+    margin-top: 30px;
+}
+
+.container .avatar .anne{
+    margin-top: 70px;
+}
+
+@media (max-width: 425px){
+    body{
+        overflow: visible;
+        background-image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top 0, left 0, right 0, bottom 85px;
+    }
+    main{
+        width: 300px;
+    }
+    container{
+        max-width: 100%;
+    }
+    .container .head-1{
+        flex-direction: column;
+    }
+    .container .head-1 .title{
+        width: fit-content;
+        margin-top: 30px;
+        text-align: center;
+        margin-bottom: .5rem;
+    }
+    .container .head-1 .p-1{
+        width: fit-content;
+        text-align: center;
+    }
+    .container .avatar{
+        grid-template-columns: repeat(1fr);
+    }
+    #rate-1-1,
+    #rate-2-1{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container .rate{
+        max-width: 100%;
+    }
+    .container .rate-1{
+        max-width: 100%;
+        flex-direction: column;
+    }
+    .container .rate-1 .star{
+        margin-bottom: 10px;
+    }
+    .container .avatar .smith,
+    .container .avatar .robert,
+    .container .avatar .anne{
+        margin-top: 20px;
+    }
+}
